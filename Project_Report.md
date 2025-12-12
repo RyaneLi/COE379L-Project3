@@ -396,17 +396,40 @@ The experimental results yield several key insights:
 ### 5.2 Limitations and Future Work
 
 **Limitations:**
-- Single dataset evaluation (AG News)
-- Limited to four-class classification
-- Hardware-specific results (CPU vs. GPU)
-- Hyperparameter search space could be expanded
+
+Several limitations constrain the generalizability of these findings:
+
+1. **Single Dataset Evaluation**: This study focuses exclusively on the AG News dataset, which may not represent all text classification scenarios. News articles have specific characteristics (structured format, clear topic boundaries) that may favor certain approaches. Results may differ for other domains such as social media text, scientific abstracts, or customer reviews.
+
+2. **Limited Classification Scope**: The four-class news classification task may not capture the complexity of larger classification problems. Performance characteristics may change with increased class counts, imbalanced datasets, or hierarchical classification structures.
+
+3. **Hardware-Specific Results**: Training and inference times are hardware-dependent. Classical models were trained on CPU, while transformer results (pending) will reflect CPU training. GPU acceleration would significantly alter transformer training times and potentially change efficiency comparisons. The results are specific to the hardware configuration used.
+
+4. **Hyperparameter Search Constraints**: To manage computational costs, hyperparameter search spaces were limited and conducted on subsets. A more exhaustive search might yield different optimal configurations, though the current results suggest the search spaces were reasonably comprehensive.
+
+5. **Training Data Subset for Transformer**: Due to computational constraints, the RoBERTa model was trained on a subset of 1,200 samples rather than the full 120,000-sample training set. This may limit the transformer's performance potential and affect the fairness of comparison with classical models trained on larger subsets.
+
+6. **Single Epoch Training**: The transformer was trained for only 1 epoch to meet time constraints, which may not represent optimal fine-tuning. Full training with multiple epochs could improve transformer performance but would require significantly more computational resources.
 
 **Future Work:**
-- Evaluation on additional datasets and tasks
-- Comparison with other transformer architectures (BERT, DistilBERT)
-- Ensemble methods combining classical and transformer models
-- Quantization and model compression for transformer efficiency
-- Analysis of computational cost in cloud deployment scenarios
+
+Several directions would extend and strengthen this research:
+
+1. **Multi-Dataset Evaluation**: Evaluate models across diverse datasets (IMDb reviews, 20 Newsgroups, Reuters, etc.) to assess generalizability and identify task-specific patterns in model performance.
+
+2. **Transformer Architecture Comparison**: Compare RoBERTa-base with other transformer architectures including BERT-base, DistilBERT (for efficiency), and smaller models like MobileBERT to understand the efficiency-accuracy trade-off spectrum.
+
+3. **Ensemble Methods**: Investigate ensemble approaches combining classical and transformer models, potentially achieving accuracy improvements while maintaining reasonable computational costs through selective ensemble strategies.
+
+4. **Model Compression and Quantization**: Explore quantization, pruning, and distillation techniques for transformers to reduce inference latency and memory requirements, making them more competitive with classical models in efficiency.
+
+5. **Cloud Deployment Cost Analysis**: Conduct comprehensive cost-benefit analysis considering cloud infrastructure costs, including training costs, inference costs at scale, and maintenance overhead for different model types.
+
+6. **Full Training Set Comparison**: Train transformer models on the complete training set with multiple epochs to provide a fair comparison with classical models and assess the true performance potential of transformers.
+
+7. **Real-World Deployment Study**: Deploy models in production environments to evaluate performance under real-world conditions, including handling of edge cases, distribution shifts, and operational challenges.
+
+8. **Interpretability Analysis**: Compare interpretability of classical models (TF-IDF features, linear coefficients) with transformer attention mechanisms to understand trade-offs between accuracy and explainability.
 
 ### 5.3 Conclusion
 
