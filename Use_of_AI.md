@@ -25,3 +25,14 @@ Use of AI
        - Model evaluation functions with all required metrics
        - Visualization code for results comparison
 
+[4]. Tool: ChatGPT (via Cursor AI)
+     Prompt: Create a Jupyter notebook for fine-tuning RoBERTa-base transformer model using Hugging Face Transformers library for text classification on AG News dataset, including training loop, evaluation metrics, inference latency measurement, and comparison with classical models
+     Output:
+       - Complete notebook structure for transformer fine-tuning
+       - RoBERTa model and tokenizer setup
+       - Hugging Face Trainer configuration
+       - Training arguments and callbacks
+       - Evaluation metrics computation
+       - Inference latency measurement
+       - Results comparison with classical models
+
