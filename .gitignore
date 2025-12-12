@@ -21,3 +21,12 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# Data files (large datasets)
+data/*.csv
+data/*.pkl
+*.csv
+*.pkl
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
