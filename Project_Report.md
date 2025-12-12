@@ -394,29 +394,32 @@ Computational efficiency was measured through:
 ## Appendix A: Hyperparameter Configurations
 
 ### A.1 XGBoost Best Hyperparameters
-- `n_estimators`: [TBD]
-- `max_depth`: [TBD]
-- `learning_rate`: [TBD]
-- `subsample`: [TBD]
+- `n_estimators`: 100
+- `max_depth`: 7
+- `learning_rate`: 0.2
+- `subsample`: 0.8
 
 ### A.2 SVM-LinearSVC Best Hyperparameters
-- `C`: [TBD]
-- `max_iter`: [TBD]
+- `C`: 1.0
+- `max_iter`: 1000
+- `penalty`: l2
+- `loss`: squared_hinge
 
 ### A.3 SVM-RBF Best Hyperparameters
-- `C`: [TBD]
-- `gamma`: [TBD]
+- `C`: 1.0
+- `gamma`: 'scale'
 
 ### A.4 RoBERTa Training Configuration
-- `num_train_epochs`: 3
+- `num_train_epochs`: 1
 - `per_device_train_batch_size`: 16
 - `per_device_eval_batch_size`: 32
-- `learning_rate`: [default from TrainingArguments]
-- `warmup_steps`: 500
+- `learning_rate`: 5e-5 (default from TrainingArguments)
+- `warmup_steps`: 100
 - `weight_decay`: 0.01
+- `gradient_accumulation_steps`: 1
 
 ---
 
-**Report Generated**: [Date]  
+**Report Generated**: January 2025  
 **Project Repository**: https://github.com/RyaneLi/COE379L-Project3
 
