@@ -15,3 +15,13 @@ Use of AI
        - Function to concatenate title and description fields
        - Data preprocessing pipeline structure
 
+[3]. Tool: ChatGPT (via Cursor AI)
+     Prompt: Create a comprehensive Jupyter notebook for classical machine learning models (XGBoost and SVM) with TF-IDF feature extraction, hyperparameter tuning using RandomizedSearchCV, and evaluation metrics including accuracy, macro F1-score, log loss, training time, and inference latency
+     Output:
+       - Complete notebook structure for classical models
+       - TF-IDF vectorization with unigrams and bigrams
+       - XGBoost implementation with hyperparameter optimization
+       - SVM implementations (LinearSVC and RBF kernel)
+       - Model evaluation functions with all required metrics
+       - Visualization code for results comparison
+
