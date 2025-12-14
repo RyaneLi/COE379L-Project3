@@ -27,6 +27,11 @@ data/*.pkl
 *.csv
 *.pkl
 
+# Large model files (exceed GitHub 100MB limit)
+data/roberta_ag_news_model/model.safetensors
+roberta-ag-news/**/model.safetensors
+roberta-ag-news/**/optimizer.pt
+
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
